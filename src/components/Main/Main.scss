@@ -1,0 +1,137 @@
+@import '../../global.scss';
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: -25px auto;
+
+  max-width: 46rem;
+
+  .taskCreator {
+    display: flex;
+    gap: 8px;
+
+    width: 100%;
+
+    .taskInput {
+      flex: 1;
+
+
+      color: $gray-100;
+
+      padding: 1rem;
+
+      background-color: $gray-500;
+
+      border: 1px solid $gray-700;
+      border-radius: 8px;
+      &:focus {
+        outline: 2px solid $blue;
+      }
+    }
+    
+    .taskCreatorButton {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 1rem;
+
+      color: $gray-100;
+      font-size: 0.875;
+      font-weight: bold;
+
+      background-color: $blue-dark;
+
+      border-radius: 8px;
+      border: none;
+      
+      transition: background-color 0.15s;
+      &:hover {
+        cursor: pointer;
+        background-color: $blue;
+      }
+      &:focus {
+        outline: 2px solid $blue;
+      }
+    }
+    
+  }
+  .taskDisplaySection {
+    margin-top: 4rem;
+    width: 100%;
+    .taskDisplayHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .taskDisplayHeaderTasksCreated {
+        display: flex;
+        gap: 8px;
+        
+        color: $blue;
+
+        font-size: 0.875rem;
+        font-weight: bold;
+
+        span {
+          padding: 0.125rem 0.5rem;
+
+          font-size: 0.75rem;
+          color: $gray-200;
+          
+          border-radius: 999px;
+          background-color: $gray-400;
+        }
+      }
+      .taskDisplayHeaderTasksConcluded {
+        display: flex;
+        gap: 8px;
+
+        color: $purple;
+
+        font-size: 0.875rem;
+        font-weight: bold;
+
+        span {
+          padding: 0.125rem 0.5rem;
+
+          font-size: 0.75rem;
+          color: $gray-200;
+          
+          border-radius: 999px;
+          background-color: $gray-400;
+        }
+      }
+    }
+    .taskDisplayArea {
+      width: 100%;
+      margin-top: 1.5rem;
+      
+      .taskDisplayAreaEmptyAdvice {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        border-top: 1px solid $gray-400;
+        border-radius: 8px;
+
+        .clipboardDiv {
+          margin: 4rem 0 1rem 0;
+        }
+        .adviceText {
+          color: $gray-300;
+          font-size: 1rem;
+        }
+        .firstSpan {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+ 

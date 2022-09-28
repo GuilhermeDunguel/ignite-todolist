@@ -1,0 +1,85 @@
+@import '../../../global.scss';
+
+.taskWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+
+  border: 1px solid $gray-400;
+  border-radius: 8px;
+  background-color: $gray-500;
+
+  .checkboxAndTitleWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    .checkbox {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 99px;
+
+      border: 2px solid $blue;
+      background: transparent;
+
+      color: white;
+      cursor: pointer;
+
+      transition: 0.1s;
+    }
+
+    .checkboxChecked {
+
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 99px;
+
+      color: white;
+
+      border: 2px solid $purple-dark;
+      background: $purple-dark;
+
+      filter: drop-shadow(0px 0px 8px rgba(88, 90, 189, 0.75));
+
+      &:hover {
+        border: 2px solid $purple;
+        background: $purple;
+        filter: drop-shadow(0px 0px 8px rgba(121, 122, 228, 0.75));
+      }
+
+      .checkedIcon {
+        width: 0.9rem;
+      }
+    }
+
+    .checkboxUnchecked:hover {
+      filter: drop-shadow(0px 0px 8px rgba(78, 168, 222, 0.75));
+    }
+
+    .taskIsIncompleted {
+      color: $gray-100;
+    }
+    .taskIsCompleted {
+      color: $gray-300;
+      text-decoration: line-through;
+    }
+  }
+
+  .deleteButton {
+    color: $gray-300;
+
+    border: none;
+    background: none;
+    
+    transition: color 0.15s;
+    &:hover {
+      cursor: pointer;
+      color: $danger;
+    }
+  }
+}
