@@ -12,13 +12,28 @@ main {
 
   .taskCreator {
     display: flex;
+    position: relative;
     gap: 8px;
 
     width: 100%;
 
+    .taskAdvice {
+      visibility: hidden;
+
+      position: absolute;
+      bottom: -2rem;
+      left: 0.5rem;
+
+      color: $blue-dark;
+      font-weight: 400;
+    }
+
+    &:focus-within .taskAdvice {
+      visibility: visible;
+    }
+
     .taskInput {
       flex: 1;
-
 
       color: $gray-100;
 
@@ -31,6 +46,10 @@ main {
       &:focus {
         outline: 2px solid $blue;
       }
+    }
+
+    .taskCreatorButtonDisabled {
+      display: none;
     }
     
     .taskCreatorButton {

@@ -17,6 +17,8 @@ export function Main() {
 
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
+  const [isTaskInputFocused, setIsTaskInputFocused] = useState(false);
+
   function handleCreateNewTask() {
     event?.preventDefault()
     setTasks([...tasks, {content: newTaskTitle, isCompleted: false}])
@@ -63,9 +65,13 @@ export function Main() {
           type="text" 
         />
         <button 
-          className='taskCreatorButton'
+          className={newTaskTitle.length < 3 ? 'taskCreatorButtonDisabled' : 'taskCreatorButton'}
           onClick={handleCreateNewTask}
-        >Criar <PlusCircle size={16} weight="bold"/> </button>
+        >Criar <PlusCircle size={16} weight="bold"/></button>
+        {newTaskTitle.length < 3 ? 
+          <span className='taskAdvice'>
+            Insira mais {3 - newTaskTitle.length} caracteres
+          </span> : null}
       </section>
       <section className='taskDisplaySection'>
         <header className='taskDisplayHeader'>
