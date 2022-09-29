@@ -1,9 +1,8 @@
-import {Check, Trash } from 'phosphor-react'
+import {Trash } from 'phosphor-react'
 import './Task.scss'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { useState } from 'react';
 import checkedIcon from '../../../assets/checkedIcon.svg'
-import { DividerHorizontalIcon, CheckIcon } from '@radix-ui/react-icons';
 
 interface TasksProps {
   content: string;
