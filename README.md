@@ -1,7 +1,7 @@
 <h1 align='center'>To-do List</h1>
 
 <br>
-<img src="https://i.imgur.com/rqHO3Qz.jpeg" alt='projectBanner'>
+<img src="https://i.imgur.com/bf8s0t6.jpg" alt='projectBanner'>
 <hr>
 <h2 align='center'><a href="https://todolist-ignite-black.vercel.app">Visite o projeto clicando aqui</a></h2>
 <h2>🟢 Sobre:</h2>
